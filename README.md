@@ -1,11 +1,11 @@
-## Name
+## MoniMe
 
-Password Generator built for uniqueness!
+Currency exchange calculator
 
 
 ## Description
 
-A password generator website for your personal use. This password generator will customize a unique password based on the password criteria you include!
+A currency exchange website for personal use. This currency exchange will convert user selected currency and convert it to another selected currency!
 
 
 ## Badges
@@ -19,9 +19,15 @@ A password generator website for your personal use. This password generator will
 ![Password Generator Screenshot](assets/images/Password-Generator-Generate-A-Unique-Password-Screenshoot.png)
 
 
+## User Story
+AS A traveler
+I WANT to be able to see how much my currency will be when I go to different countries
+SO THAT I know how much currency to take with me
+GIVEN
+
 ## Usage
 
-To use the password generator, click the "Generate Password" button. Once clicked, a window prompt will appear at the top of the page. This prompt will ask you to input the a number, which indicates the length of your customized password. When confirmed, four questions will be asked to further customize your password. Upon completion of questions your password will be generated in the display box on the webpage! 
+Toconvert your selected  use the password generator, click the "Generate Password" button. Once clicked, a window prompt will appear at the top of the page. This prompt will ask you to input the a number, which indicates the length of your customized password. When confirmed, four questions will be asked to further customize your password. Upon completion of questions your password will be generated in the display box on the webpage! 
 
 
 ## Support
