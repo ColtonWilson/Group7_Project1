@@ -3,10 +3,6 @@
     background-color: #111;
 }
 
-body {
-
-}
-
 header {
     /* display: grid; */
     grid-template-columns: auto auto;
