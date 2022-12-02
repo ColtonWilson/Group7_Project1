@@ -5,7 +5,7 @@ Currency exchange calculator
 
 ## Description
 
-Our currency exchange conversion calculator uses the current exchange rate to determine how much your money is worth in a different currency. It allows the customer to have an idea how much would their money is worth since the value can fluctuate due to various economic conditions.
+Our currency exchange conversion calculator uses the current exchange rate to determine how much your money is worth in a different currency. It allows the customer to have an idea since the value can fluctuate due to various economic conditions.
 
 ## Badges
 
