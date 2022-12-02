@@ -5,8 +5,7 @@ Currency exchange calculator
 
 ## Description
 
-A currency exchange website for personal use. This currency exchange will convert user selected currency and convert it to another selected currency!
-
+Our cuurency exchange conversion calculator uses the current exchange rate to determine how much your money is worth in a different currency. It allows the customer to have an idea how much would their money is worth since the value can fluctuate due to various economic conditions.
 
 ## Badges
 
