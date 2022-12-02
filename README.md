@@ -5,7 +5,7 @@ Currency exchange calculator
 
 ## Description
 
-Our cuurency exchange conversion calculator uses the current exchange rate to determine how much your money is worth in a different currency. It allows the customer to have an idea how much would their money is worth since the value can fluctuate due to various economic conditions.
+Our currency exchange conversion calculator uses the current exchange rate to determine how much your money is worth in a different currency. It allows the customer to have an idea how much would their money is worth since the value can fluctuate due to various economic conditions.
 
 ## Badges
 
@@ -19,8 +19,8 @@ Our cuurency exchange conversion calculator uses the current exchange rate to de
 
 
 ## User Story
-AS A traveler
-I WANT to be able to see how much my currency will be when I go to different countries
+AS A traveler I want to have an easy access to the currency in the other country I am going
+I WANT to be able to see how much is the exchange rate
 SO THAT I know how much currency to take with me
 GIVEN
 
