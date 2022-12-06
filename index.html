@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- TailWind CSS -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@200;300&family=Dancing+Script&display=swap" >
     <!-- Link to style.css -->
     <link rel="stylesheet" href="style.css">
+    
     <title>MoniMez</title>
 </head>
 <body>
-<<<<<<< HEAD
-    
-=======
     <header>
         <!-- <div class="logo">Logo</div> -->
 
@@ -52,12 +51,39 @@
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sit praesentium facilis error deleniti possimus at voluptatem quas? Rem nam deserunt corporis dolorem optio inventore voluptatem dolore laborum eum fuga.</p>
         </div>
 
-        <div class="currency-calculator">Currency Calculator</div>
+        <div class="currency-calculator">Currency Calculator
+           <form method="post" action="#">
+                <label for="startcurrency">Choose a starting currency:</label>
+                     <select name="begincurrency" id="begincurrency">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="CAD">CAD</option>
+                        <option value="MXN">MXN</option>
+                    </select>
+                        <br><br>
+                    <label for="currency-field">Enter Amount</label>
+                    <input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="$1,000,000.00">
+                    <br><br>
+                    <label for="endcurrency">Choose a ending currency:</label>
+                     <select name="endcurrency" id="endcurrency">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="CAD">CAD</option>
+                        <option value="MXN">MXN</option>
+                    </select>
+                        <br><br>
+                        <button class="btn btn-danger" id="fetch-button" type="button">
+                         Submit
+                        </button>
+
+                    <div class="answer"></div>
+            </form>
+        </div>
 
         <div class="stock-ticker">Stock Ticker</div>
     </div>
->>>>>>> ec534a34e4118d221ca738ce6b2e96ff879b6249
     <!-- Javascript Link -->
+    
     <script src="script.js"></script>
 </body>
 </html>
