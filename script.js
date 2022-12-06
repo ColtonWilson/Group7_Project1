@@ -2,6 +2,7 @@ var baseUrlOne = "https://api.coinranking.com/v2/coins"
 var baseUrlTwo = "https://api.currencyfreaks.com/latest?apikey=74322d673c074013814dab12cbf6be53"
 var proxyUrl = "https://cors-anywhere.herokuapp.com/"
 var apiKeyOne = "coinranking8e254f87ce60317d0418cdb55cb43b2fce3d857bd5f356ec"
+var apiKeyTwo = "74322d673c074013814dab12cbf6be53"
 
 var answer = document.getElementsByClassName('answer');
 var fetchButton = document.getElementById('fetch-button');
@@ -17,7 +18,7 @@ $("input").keyup(function () {
 //currencyConvert function
 function currencyconvert(){
 
-    let requestURL = '';
+   
 
     let startcurrency = document.getElementById("begincurrency");
     var startvalue = startcurrency.value;
@@ -31,6 +32,30 @@ function currencyconvert(){
     console.log(startvaluetext);
     console.log(endvaluetext);
     console.log(amountvalue);
+
+     let requestURL = "https://api.currencyfreaks.com/latest?apikey=" +
+     apiKeyTwo + "&symbols=" + endvaluetext;
+
+     fetch(requestURL)
+     .then(function(response){
+        return response.json();
+     })
+     .then(function(data){
+        console.log(data);
+        var exchangeRate = document.createElement('h3');
+        var finalAnswer = document.createElement('p');
+        var rate = data.rates;
+        exchangeRate.textContent = rate[Object.keys(rate)[0]];
+        
+;
+        console.log(exchangeRate);
+
+        document.getElementById('answer').appendChild(exchangeRate);
+        console.log(exchangeRate*1);
+
+        
+
+     });
 }
 
 //click listener
@@ -38,41 +63,41 @@ function currencyconvert(){
 
 
 //First API
-fetch(`${proxyUrl}${baseUrlOne}`, {
-    method: "GET",
-    headers: {
-        'Content-Type': 'application/json',
-        'x-access-token': `${apiKeyOne}`,
-        'Access-Control-Allow-Origin': '*'
-    }
-}).then((response) => {
-    if(response.ok)
-    {
-        response.json().then((json)=> {
-            console.log(json.data.coins)
+// fetch(`${proxyUrl}${baseUrlOne}`, {
+//     method: "GET",
+//     headers: {
+//         'Content-Type': 'application/json',
+//         'x-access-token': `${apiKeyOne}`,
+//         'Access-Control-Allow-Origin': '*'
+//     }
+// }).then((response) => {
+//     if(response.ok)
+//     {
+//         response.json().then((json)=> {
+//             console.log(json.data.coins)
 
            
-        })
-    }
-}).catch((error) => {
-    console.log(error);
- });
+//         })
+//     }
+// }).catch((error) => {
+//     console.log(error);
+//  });
 
 
  //Second API
- fetch(`${baseUrlTwo}`, {
+//  fetch(`${baseUrlTwo}`, {
     
-}).then((response) => {
-    if(response.ok)
-    {
-        response.json().then((json)=> {
-            console.log(json)
+// }).then((response) => {
+//     if(response.ok)
+//     {
+//         response.json().then((json)=> {
+//             console.log(json)
 
-        })
-    }
-}).catch((error) => {
-    console.log(error);
- });
+//         })
+//     }
+// }).catch((error) => {
+//     console.log(error);
+//  });
 
 
 
