@@ -57,7 +57,8 @@ p {
 
 .currency-calculator {
     margin-top: 80px;
-    color: white;
+    color: black;
+    background-color: purple;
 
 }
 
