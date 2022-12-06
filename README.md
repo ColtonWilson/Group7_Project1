@@ -1,11 +1,9 @@
-## MoniMe
+## Name
 
-Currency exchange calculator
-
-
+MoniMez
 ## Description
 
-Our currency exchange conversion calculator uses the current exchange rate to determine how much your money is worth in a different currency. It allows the customer to have an idea since the value can fluctuate due to various economic conditions.
+A currency exchange conversion calculator that uses current exchange rates to determine how much your money is worth in a different currency. It allows the customer to have an idea since the value can fluctuate due to various economic conditions.
 
 ## Badges
 
@@ -17,21 +15,13 @@ Our currency exchange conversion calculator uses the current exchange rate to de
 
 ![Password Generator Screenshot](assets/images/Password-Generator-Generate-A-Unique-Password-Screenshoot.png)
 
-
-## User Story
-AS A traveler I want to have an easy access to the currency in the other country I am going
-I WANT to be able to see how much is the exchange rate
-SO THAT I know how much currency to take with me
-GIVEN
-
 ## Usage
 
-Toconvert your selected  use the password generator, click the "Generate Password" button. Once clicked, a window prompt will appear at the top of the page. This prompt will ask you to input the a number, which indicates the length of your customized password. When confirmed, four questions will be asked to further customize your password. Upon completion of questions your password will be generated in the display box on the webpage! 
+To use the currency converter click on the dropdown menu and select the currency you would like to convert the value of 
 
 
 ## Support
-
-If you come across a bug or just have any feedback, support can be contacted at DJonHarrison94@gmail.com!
+If you come across a bug or just have any feedback, support can be contacted at
 
 
 ## License
