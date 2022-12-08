@@ -72,3 +72,10 @@ input[type="text"], textarea, option, select, button {
   background-color : #d1d1d1; 
 
 }
+
+.table, th,td{
+    color: antiquewhite;
+    border: 1px solid;
+    border-style: solid;
+    border-color: aliceblue;
+}
