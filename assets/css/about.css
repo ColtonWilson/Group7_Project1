@@ -1,0 +1,51 @@
+* {
+    font-family: 'Anek Devanagari';
+    background-color: #111;
+    
+
+}
+
+
+h1 {
+    margin-top: 150px;
+    margin-left: 400px;
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 50px;
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-image: url(/assets/images/ishant-mishra-osWDvhPlGLU-unsplash.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 1000px;
+    border: 2px solid;
+}
+
+p {
+    color: white;
+    margin:50px;
+    margin-left: 400px;
+    padding: 15px;
+}
+
+form {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form,
+input {
+    color: white;
+}
+
+textarea {
+    background: white;
+}
+ #name,
+ #email {
+    background: white;
+ }
