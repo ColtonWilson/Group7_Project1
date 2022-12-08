@@ -56,12 +56,18 @@ p {
 
 .currency-calculator {
     margin-top: 80px;
-    color: black;
-    background-color: purple;
+    color: white;
+    
 
 }
 
 .stock-ticker {
     margin-top: 80px;
     color: white;
+}
+
+input[type="text"], textarea, option, select, button {
+
+  background-color : #d1d1d1; 
+
 }
