@@ -42,16 +42,42 @@ function currencyconvert(){
      })
      .then(function(data){
         console.log(data);
-        var exchangeRate = document.createElement('h3');
+        var remove = document.getElementById("answer");
+        if(remove.hasChildNodes())
+        {
+            remove.removeChild(remove.lastElementChild);
+            remove.removeChild(remove.lastElementChild);
+        }
+        var exchangeRate = document.createElement('p');
         var finalAnswer = document.createElement('p');
+        exchangeRate.innerHTML = '';
+        finalAnswer.innerHTML = '';
         var rate = data.rates;
-        exchangeRate.textContent = rate[Object.keys(rate)[0]];
-        
-;
-        console.log(exchangeRate);
 
+        //Get todays date
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        today = mm + '/' + dd + '/' + yyyy;
+        //Print exchange rate to console
+        exchangeRate.textContent =  "Exchange Rate for " +endvaluetext+" on "+ today + " is: " + rate[Object.keys(rate)[0]];
+        var just_rate = rate[Object.keys(rate)[0]];
         document.getElementById('answer').appendChild(exchangeRate);
-        console.log(exchangeRate*1);
+
+        //convert exchange rate to number
+        var number_rate = Number(just_rate);
+        var number_submitted = Number(amountvalue.replace(/[^0-9.-]+/g,""));
+        console.log( number_rate);
+        console.log(number_submitted);
+        
+        var multiply_both_numbers = number_rate * number_submitted;
+        var currency_number = multiply_both_numbers.toFixed(2);
+        console.log(multiply_both_numbers);
+        console.log(typeof multiply_both_numbers);
+
+        finalAnswer.textContent = "Amount from exchange: " + currency_number;
+        document.getElementById('answer').appendChild(finalAnswer);
 
         
 

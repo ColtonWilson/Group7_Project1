@@ -59,13 +59,10 @@
                 <label for="startcurrency">Choose a starting currency:</label>
                      <select name="begincurrency" id="begincurrency">
                         <option value="USD">USD</option>
-                        <option value="EUR">EUR</option>
-                        <option value="CAD">CAD</option>
-                        <option value="MXN">MXN</option>
                     </select>
                         <br><br>
                     <label for="currency-field">Enter Amount</label>
-                    <input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="$1,000,000.00">
+                    <input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="$1,000,000.00" class="h-full rounded-md border-transparent bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                     <br><br>
                     <label for="endcurrency">Choose a ending currency:</label>
                      <select name="endcurrency" id="endcurrency">
