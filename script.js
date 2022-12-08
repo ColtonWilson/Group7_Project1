@@ -7,6 +7,12 @@ var apiKeyTwo = "74322d673c074013814dab12cbf6be53"
 var answer = document.getElementsByClassName('answer');
 var fetchButton = document.getElementById('fetch-button');
 
+let conversionDiv = document.getElementById("conversionHistory");
+let buttonsDiv = document.getElementById("buttons")
+
+let emptyArray = [];
+
+let storedArray = JSON.parse(window.localStorage.getItem("conversions"));
 
  // add Enter key for searching as well
 $("input").keyup(function () {
@@ -18,7 +24,6 @@ $("input").keyup(function () {
 //currencyConvert function
 function currencyconvert(){
 
-   
 
     let startcurrency = document.getElementById("begincurrency");
     var startvalue = startcurrency.value;
@@ -76,10 +81,18 @@ function currencyconvert(){
         console.log(multiply_both_numbers);
         console.log(typeof multiply_both_numbers);
 
-        finalAnswer.textContent = "Amount from exchange: " + currency_number;
+        finalAnswer.textContent = amountvalue +" was converted to " + endvaluetext +  " for a total of: " + currency_number;
         document.getElementById('answer').appendChild(finalAnswer);
 
-        
+        let conversionArray = definecurrencyArray(storedArray, emptyArray);
+
+        let conversionarrayCurrent = 
+        {
+            conversion: finalAnswer
+        };
+
+        conversionArray.push(conversionarrayCurrent);
+        savecurrency(conversionArray);
 
      });
 }
@@ -87,12 +100,48 @@ function currencyconvert(){
 //click listener
  fetchButton.addEventListener('click', currencyconvert);
 
+const savecurrency = (array) => {
+  window.localStorage.setItem("conversions", JSON.stringify(array));
+}
 
 
+const definecurrencyArray = (arr1, arr2) => {
+  if(arr1 !== null) {
+    return arr1
+  } else {
+    return arr2
+  }
+}
 
+function displayAllConversions() {
+  let currencyArray = defineScoresArray(storedArray, emptyArray);
 
+  currencyArray.forEach(obj => {
+    let conversion = obj.conversions;
+    let outputP = document.createElement("p");
+    outputP.innerText = `${conversion}`;
+    conversionDiv.append(outputP);
+  });
+}
 
+function viewConversions() {
+  ConversionBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    displayAllConversions();
+    goBackBtn();
+  });
+}
 
+function goBackBtn() {
+  let backBtn = document.createElement("input");
+  backBtn.setAttribute("type", "button");
+  backBtn.setAttribute("value", "Go Back");
+  backBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    window.location.reload();
+  })
+  buttonsDiv.append(backBtn)
+}
 
  //Currency Check
  //

@@ -18,6 +18,26 @@ fetch(`${proxyUrl}${baseUrlOne}`, {
         response.json().then((json)=> {
             console.log(json.data.coins)
 
+            let coinsData = json.data.coins
+
+            if(coinsData.length > 0){
+                var cryptoCoins = "";
+
+            }
+
+            //For Loop Start
+            for(var x =0; x < 10; x++)
+            {
+                cryptoCoins += "<tr>"
+                cryptoCoins += `<td> ${coinsData[x].btcPrice} </td>`;
+                cryptoCoins += `<td> ${coinsData[x].rank} </td>`;
+                cryptoCoins += `<td> ${coinsData[x].name} </td>`;
+                cryptoCoins += `<td> ${coinsData[x].price} </td>`;
+                cryptoCoins += `<td> ${coinsData[x].symbol} </td>`; "</tr>"
+
+            }
+
+            document.getElementById("data").innerHTML = cryptoCoins;
            
         })
     }
@@ -25,3 +45,12 @@ fetch(`${proxyUrl}${baseUrlOne}`, {
     console.log(error);
  });
 
+var intX = 1100;
+function move(){
+    var objDiv = document.getElementById('stock');
+    if ( objDiv != null ) {
+        objDiv.style.left = (intX -= 3).toString() + 'px';
+        } //if
+    if ( intX > 0 ) { setTimeout(move,20); }
+return true;
+}
