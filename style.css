@@ -22,11 +22,12 @@ h1 {
     background-image: url(assets/images/ishant-mishra-osWDvhPlGLU-unsplash.jpg);
     background-size: cover;
     height: 400px;
+    width: 1000px;
     border: 2px solid;
+    position: relative;
 }
 
  a {
-
     color: white;
     display: inline-block;
     text-decoration: none;
@@ -40,6 +41,42 @@ h1 {
 p {
     color: white;
     margin:50px;
+}
+
+h2 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    color: white;
+    font-size: 25px;  
+    word-spacing: 10px;
+}
+
+input[type="text"], textarea, option, select, button {
+    background-color : #fff;
+    color: black;
+    margin-bottom: 45px;
+}
+
+input {
+    height: 500px;
+}
+
+label {
+    margin-right: 10px;
+    margin-bottom: 100px;
+    font-size: 18px;
+}
+
+.placeholder {
+    margin-top: auto;
+}
+
+.btn {
+    margin-top: 30px;
+    margin-left: 150px;
+    width: 80px;
+    height: 35px;
+    
 }
 
 .nav-links {
@@ -56,19 +93,10 @@ p {
 }
 
 .currency-calculator {
-    margin-top: 80px;
-    color: white;
-    
-
+    color: #fff;
 }
 
 .stock-ticker {
     margin-top: 80px;
     color: white;
-}
-
-input[type="text"], textarea, option, select, button {
-
-  background-color : #d1d1d1; 
-
 }
