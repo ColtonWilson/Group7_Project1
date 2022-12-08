@@ -8,7 +8,7 @@
     <!-- TailWind CSS -->
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@200;300&family=Dancing+Script&display=swap" >
     <!-- Link to style.css -->
     <link rel="stylesheet" href="style.css">
@@ -87,9 +87,21 @@
             <div id="answer"></div>
         </div>
 
-        <div class="stock-ticker">Stock Ticker
-            
-        </div>
+        <div class="stock-ticker" id="stock">Stock Ticker</div>
+            <!-- crypto table -->
+            <table class="table-auto table">
+                    <thead>
+                        <tr>
+                            <th scope="col">BTC</th>
+                            <th scope="col">Rank</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Symbol</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data">
+                    </tbody>                 
+            </table>
     </div>
     <!-- Javascript Link -->
     <script src="ticker.js"></script>
