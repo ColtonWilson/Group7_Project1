@@ -88,42 +88,6 @@ function currencyconvert(){
  fetchButton.addEventListener('click', currencyconvert);
 
 
-//First API
-// fetch(`${proxyUrl}${baseUrlOne}`, {
-//     method: "GET",
-//     headers: {
-//         'Content-Type': 'application/json',
-//         'x-access-token': `${apiKeyOne}`,
-//         'Access-Control-Allow-Origin': '*'
-//     }
-// }).then((response) => {
-//     if(response.ok)
-//     {
-//         response.json().then((json)=> {
-//             console.log(json.data.coins)
-
-           
-//         })
-//     }
-// }).catch((error) => {
-//     console.log(error);
-//  });
-
-
- //Second API
-//  fetch(`${baseUrlTwo}`, {
-    
-// }).then((response) => {
-//     if(response.ok)
-//     {
-//         response.json().then((json)=> {
-//             console.log(json)
-
-//         })
-//     }
-// }).catch((error) => {
-//     console.log(error);
-//  });
 
 
 
