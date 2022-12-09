@@ -1,12 +1,11 @@
 * {
     font-family: 'Anek Devanagari';
     background-color: #111;
-    
-
 }
 
 
 h1 {
+    padding: 45px;
     margin-top: 150px;
     margin-left: auto;
     margin-right: auto;

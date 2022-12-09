@@ -11,23 +11,7 @@ header {
     margin-top: 45px;
 }
 
-h1 {
-    font-size: 45px;
-    font-weight: 600;
-    letter-spacing: 50px;
-    align-items: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    background-image: url(/assets/images/ishant-mishra-osWDvhPlGLU-unsplash.jpg);
-    background-size: cover;
-    height: 400px;
-    width: 1000px;
-    border: 2px solid;
-    position: relative;
-}
-
- a {
+a {
     color: white;
     display: inline-block;
     text-decoration: none;
@@ -41,11 +25,11 @@ h1 {
 p {
     color: white;
     margin:50px;
+    font-size: 20px;
 }
 
 h2 {
     margin-top: 80px;
-    margin-bottom: 80px;
     color: white;
     font-size: 25px;  
     word-spacing: 10px;
@@ -54,34 +38,32 @@ h2 {
 input[type="text"], textarea, option, select, button {
     background-color : #fff;
     color: black;
+}
+
+form {
     margin-bottom: 45px;
-}
-
-input {
-    height: 500px;
-}
-
-label {
-    margin-right: 10px;
-    margin-bottom: 100px;
-    font-size: 18px;
-}
-
-.placeholder {
-    margin-top: auto;
-}
-
-.btn {
-    margin-top: 30px;
-    margin-left: 150px;
-    width: 80px;
-    height: 35px;
-    
 }
 
 .nav-links {
     display: flex;
     justify-content: center;
+}
+
+.webpageName {
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 50px;
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-image: url(/assets/images/ishant-mishra-osWDvhPlGLU-unsplash.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 1000px;
+    border: 2px solid;
+    position: relative;
+    margin-bottom: 50px;
 }
 
 .container {
@@ -93,7 +75,48 @@ label {
 }
 
 .currency-calculator {
+    margin-top: 45px;
+    margin-right: 45px;
     color: #fff;
+}
+
+.currencyTitle {
+    margin-top: 150px;
+    font-size: 35px;
+}
+
+.input {
+    height: 25px;
+    color: #111;
+}
+
+.label {
+    margin-right: 10px;
+    margin-bottom: 100px;
+    font-size: 18px;
+    margin-top: 70px;
+    
+}
+
+.select {
+    color: #111;
+}
+
+.placeholder {
+    margin-top: auto;
+}
+
+.btn {
+    margin-top: 45px;
+    margin-left: 150px;
+    width: 80px;
+    height: 35px;
+    color: #fff;
+}
+
+.answer {
+    font-size: 20px;
+    
 }
 
 .stock-ticker {
@@ -101,15 +124,10 @@ label {
     color: white;
 }
 
-input[type="text"], textarea, option, select, button {
-
-  background-color : #d1d1d1; 
-
-}
-
 .table, th,td{
     color: antiquewhite;
     border: 1px solid;
     border-style: solid;
     border-color: aliceblue;
+    margin-top: 50px;
 }
