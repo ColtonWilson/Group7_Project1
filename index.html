@@ -70,7 +70,7 @@
         <div class="currency-calculator">
            <form method="post" action="#">
                 <label class="label" for="startCurrency">Choose a starting currency:</label>
-                     <select name="begincurrency" id="begincurrency">
+                     <select class="select" name="begincurrency" id="begincurrency">
                         <option value="USD">USD</option>
                     </select>
                         <br><br>
@@ -78,16 +78,17 @@
                     <input class="input" type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="$1,000,000.00" class="h-full rounded-md border-transparent bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                     <br><br>
                     <label class="label" for="endcurrency">Choose a ending currency:</label>
-                     <select name="endcurrency" id="endcurrency">
-                        <option value="USD">USD</option>
-                        <option value="EUR">EUR</option>
-                        <option value="CAD">CAD</option>
-                        <option value="MXN">MXN</option>
+                     <select class="select" name="endcurrency" id="endcurrency">
+                        <option class="option" value="USD">USD</option>
+                        <option class="option" value="EUR">EUR</option>
+                        <option class="option" value="CAD">CAD</option>
+                        <option class="option" value="MXN">MXN</option>
                     </select>
                         <br><br>
                         <button class="btn btn-danger" id="fetch-button" type="button">
                          Submit
                         </button>
+                        <br>
                         <button class="btn btn-danger" id=" ConversionBtn" type="button">
                          History
                         </button>

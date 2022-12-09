@@ -37,19 +37,20 @@ h2 {
 input[type="text"], textarea, option, select, button {
     background-color : #fff;
     color: black;
-    
 }
 
 form {
     margin-bottom: 45px;
 }
 
-option {
-    color: #111;
+.nav-links {
+    display: flex;
+    justify-content: center;
 }
 
 .input {
     height: 25px;
+    color: #111;
 }
 
 .label {
@@ -76,28 +77,6 @@ option {
     margin-bottom: 50px;
 }
 
-.currencyTitle {
-    margin-top: 150px;
-    font-size: 35px;
-}
-
-.placeholder {
-    margin-top: auto;
-}
-
-.btn {
-    margin-top: 30px;
-    margin-left: 150px;
-    width: 80px;
-    height: 35px;
-    color: #fff;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-}
-
 .container {
     display: flex;
     justify-content: center;
@@ -108,6 +87,26 @@ option {
 
 .currency-calculator {
     margin-top: 45px;
+    color: #fff;
+}
+
+.currencyTitle {
+    margin-top: 150px;
+    font-size: 35px;
+}
+.select {
+    color: #111;
+}
+
+.placeholder {
+    margin-top: auto;
+}
+
+.btn {
+    margin-top: 45px;
+    margin-left: 150px;
+    width: 80px;
+    height: 35px;
     color: #fff;
 }
 
