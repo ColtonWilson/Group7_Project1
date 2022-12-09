@@ -5,7 +5,6 @@
 }
 
 header {
-    /* display: grid; */
     grid-template-columns: auto auto;
     align-items: center;
     margin-top: 45px;
@@ -25,7 +24,6 @@ a {
 p {
     color: white;
     margin:50px;
-    
 }
 
 h2 {
@@ -41,6 +39,10 @@ input[type="text"], textarea, option, select, button {
     
 }
 
+form {
+    margin-bottom: 45px;
+}
+
 .input {
     height: 25px;
 }
@@ -49,7 +51,8 @@ input[type="text"], textarea, option, select, button {
     margin-right: 10px;
     margin-bottom: 100px;
     font-size: 18px;
-    margin-top: 45px;
+    margin-top: 70px;
+    
 }
 .webpageName {
     font-size: 50px;
@@ -69,7 +72,7 @@ input[type="text"], textarea, option, select, button {
 }
 
 .currencyTitle {
-    margin-top: 50px;
+    margin-top: 150px;
     font-size: 35px;
 }
 
@@ -113,4 +116,5 @@ input[type="text"], textarea, option, select, button {
     border: 1px solid;
     border-style: solid;
     border-color: aliceblue;
+    margin-top: 100px;
 }
