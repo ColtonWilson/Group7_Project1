@@ -5,6 +5,7 @@
 }
 
 header {
+    /* display: grid; */
     grid-template-columns: auto auto;
     align-items: center;
     margin-top: 45px;
@@ -41,6 +42,10 @@ input[type="text"], textarea, option, select, button {
 
 form {
     margin-bottom: 45px;
+}
+
+option {
+    color: #111;
 }
 
 .input {
@@ -85,7 +90,7 @@ form {
     margin-left: 150px;
     width: 80px;
     height: 35px;
-    
+    color: #fff;
 }
 
 .nav-links {
@@ -116,5 +121,5 @@ form {
     border: 1px solid;
     border-style: solid;
     border-color: aliceblue;
-    margin-top: 100px;
+    margin-top: 50px;
 }
