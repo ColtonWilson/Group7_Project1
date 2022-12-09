@@ -57,7 +57,7 @@ form {
     color: white;
     display: flex;
     justify-content: center;
-    background-image: url(/assets/images/ishant-mishra-osWDvhPlGLU-unsplash.jpg);
+    background-image: url(../images/ishant-mishra-osWDvhPlGLU-unsplash.jpg);
     background-size: cover;
     height: 400px;
     width: 1000px;
