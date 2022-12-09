@@ -16,7 +16,7 @@ fetch(`${proxyUrl}${baseUrlOne}`, {
     if(response.ok)
     {
         response.json().then((json)=> {
-            console.log(json.data.coins)
+            
 
             let coinsData = json.data.coins
 
@@ -44,13 +44,3 @@ fetch(`${proxyUrl}${baseUrlOne}`, {
 }).catch((error) => {
     console.log(error);
  });
-
-var intX = 1100;
-function move(){
-    var objDiv = document.getElementById('stock');
-    if ( objDiv != null ) {
-        objDiv.style.left = (intX -= 3).toString() + 'px';
-        } //if
-    if ( intX > 0 ) { setTimeout(move,20); }
-return true;
-}
