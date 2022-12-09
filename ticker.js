@@ -16,7 +16,7 @@ fetch(`${proxyUrl}${baseUrlOne}`, {
     if(response.ok)
     {
         response.json().then((json)=> {
-            console.log(json.data.coins)
+            
 
             let coinsData = json.data.coins
 

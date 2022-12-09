@@ -3,19 +3,22 @@ var baseUrlTwo = "https://api.currencyfreaks.com/latest?apikey=74322d673c0740138
 var proxyUrl = "https://cors-anywhere.herokuapp.com/"
 var apiKeyOne = "coinranking8e254f87ce60317d0418cdb55cb43b2fce3d857bd5f356ec"
 var apiKeyTwo = "74322d673c074013814dab12cbf6be53"
-
+//div for writing answer
 var answer = document.getElementsByClassName('answer');
+//div for submit button
 var fetchButton = document.getElementById('fetch-button');
-
+//div for saved conversion history
 let conversionDiv = document.getElementById("conversionHistory");
-let buttonsDiv = document.getElementById("buttons")
-
+//div for buttons
+let buttonsDiv = document.getElementById("buttonsDiv");
+//button for history
+let viewHistoryBtn = document.getElementById("HistoryBtn");
+//array to store conversion result
 let emptyArray = [];
-
-let storedArray = JSON.parse(window.localStorage.getItem("conversions"));
-
+//array of conversion results from local storage
+let storedArray = JSON.parse(window.localStorage.getItem("conversionResults"));
  // add Enter key for searching as well
-$("input").keyup(function () {
+$("input").keyup(function (event) {
     if (event.key === "Enter") {
         $clicked.click();
     }
@@ -26,17 +29,11 @@ function currencyconvert(){
 
 
     let startcurrency = document.getElementById("begincurrency");
-    var startvalue = startcurrency.value;
     var startvaluetext = startcurrency.options[startcurrency.selectedIndex].text;
     let amount = document.getElementById("currency-field");
     var amountvalue = amount.value;
     let endcurrency = document.getElementById("endcurrency");
-    var endvalue = endcurrency.value;
     var endvaluetext = endcurrency.options[endcurrency.selectedIndex].text;
-
-    console.log(startvaluetext);
-    console.log(endvaluetext);
-    console.log(amountvalue);
 
      let requestURL = "https://api.currencyfreaks.com/latest?apikey=" +
      apiKeyTwo + "&symbols=" + endvaluetext;
@@ -46,7 +43,6 @@ function currencyconvert(){
         return response.json();
      })
      .then(function(data){
-        console.log(data);
         var remove = document.getElementById("answer");
         if(remove.hasChildNodes())
         {
@@ -73,26 +69,23 @@ function currencyconvert(){
         //convert exchange rate to number
         var number_rate = Number(just_rate);
         var number_submitted = Number(amountvalue.replace(/[^0-9.-]+/g,""));
-        console.log( number_rate);
-        console.log(number_submitted);
+
         
         var multiply_both_numbers = number_rate * number_submitted;
         var currency_number = multiply_both_numbers.toFixed(2);
-        console.log(multiply_both_numbers);
-        console.log(typeof multiply_both_numbers);
+
 
         finalAnswer.textContent = amountvalue +" was converted to " + endvaluetext +  " for a total of: " + currency_number;
         document.getElementById('answer').appendChild(finalAnswer);
-
-        let conversionArray = definecurrencyArray(storedArray, emptyArray);
-
-        let conversionarrayCurrent = 
+        //capture the result to save into local storage
+        let resultArray = defineResultArray(storedArray, emptyArray);
+        let result = finalAnswer.innerHTML;
+        let resultArrayCurrent = 
         {
-            conversion: finalAnswer
+            Result: result
         };
-
-        conversionArray.push(conversionarrayCurrent);
-        savecurrency(conversionArray);
+        resultArray.push(resultArrayCurrent);
+        saveResult(resultArray);
 
      });
 }
@@ -100,12 +93,12 @@ function currencyconvert(){
 //click listener
  fetchButton.addEventListener('click', currencyconvert);
 
-const savecurrency = (array) => {
-  window.localStorage.setItem("conversions", JSON.stringify(array));
+const saveResult = (array) => {
+  window.localStorage.setItem("conversionResults", JSON.stringify(array));
 }
 
 
-const definecurrencyArray = (arr1, arr2) => {
+const defineResultArray = (arr1, arr2) => {
   if(arr1 !== null) {
     return arr1
   } else {
@@ -113,34 +106,61 @@ const definecurrencyArray = (arr1, arr2) => {
   }
 }
 
-function displayAllConversions() {
-  let currencyArray = defineScoresArray(storedArray, emptyArray);
-
-  currencyArray.forEach(obj => {
-    let conversion = obj.conversions;
-    let outputP = document.createElement("p");
-    outputP.innerText = `${conversion}`;
-    conversionDiv.append(outputP);
+function displayAllResults() {
+  let currencyArray = defineResultArray(storedArray, emptyArray);
+  let resultArray = JSON.parse(currencyArray);
+  resultArray.forEach((obj) => {
+    let results = obj.Result;
+    let resultP = document.createElement("p");
+    console.log(results);
+    resultP.innerText = `${results}`;
+    conversionDiv.append(resultP);
   });
 }
 
-function viewConversions() {
-  ConversionBtn.addEventListener("click", function(event) {
-    event.preventDefault();
-    displayAllConversions();
+
+viewHistoryBtn.addEventListener("click", function() {
+    storedArray = localStorage.getItem("conversionResults");
+    var remove = document.getElementById("answer");
+        if(remove.hasChildNodes())
+        {
+            remove.removeChild(remove.lastElementChild);
+            remove.removeChild(remove.lastElementChild);
+        }
     goBackBtn();
+    clearHistoryBtn();
+    displayAllResults();
+    
   });
-}
+
 
 function goBackBtn() {
   let backBtn = document.createElement("input");
   backBtn.setAttribute("type", "button");
   backBtn.setAttribute("value", "Go Back");
+  backBtn.setAttribute("class", "backBtn");
   backBtn.addEventListener("click", function(event){
     event.preventDefault();
     window.location.reload();
   })
   buttonsDiv.append(backBtn)
+}
+
+const removeEls = (...els) => {
+  for (let el of els) el.remove();
+}
+
+function clearHistoryBtn() {    
+  let clearBtn = document.createElement("input");
+  clearBtn.setAttribute("type", "button");
+  clearBtn.setAttribute("value", "Clear History");
+  clearBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    removeEls(conversionDiv);
+    window.localStorage.removeItem("conversionResults");
+    window.location.reload();
+  })
+  buttonsDiv.append(clearBtn)
 }
 
  //Currency Check
