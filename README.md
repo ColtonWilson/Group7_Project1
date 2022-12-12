@@ -17,15 +17,11 @@ A currency exchange conversion calculator that uses current exchange rates to de
 
 ## Usage
 
-To use the currency converter click on the dropdown menu and select the currency you would like to convert the value of 
+To use the currency converter click on the dropdown menu and select the currency you would like to convert the value of. Once you choose your desired currency click submit and your results will display.
 
+To view the stock ticker you will need to activate the proxyURL below.
 #Need This
 website to turn on the proxyURL <a href="https://cors-anywhere.herokuapp.com/corsdemo">ProxyURL</a>
-
-## Support
-If you come across a bug or just have any feedback, support can be contacted at
-
-
 ## License
 
 MIT License
