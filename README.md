@@ -13,7 +13,9 @@ A currency exchange conversion calculator that uses current exchange rates to de
 
 ## Visuals
 
-![Password Generator Screenshot](assets/images/Password-Generator-Generate-A-Unique-Password-Screenshoot.png)
+![MoniMez Website](https://github.com/ColtonWilson/MoniMez/blob/main/assets/Screenshot%202022-12-11%20180911.png)
+![MoniMez Website](https://github.com/ColtonWilson/MoniMez/blob/main/assets/Screenshot%202022-12-11%20181032.png)
+![MoniMez Website](https://github.com/ColtonWilson/MoniMez/blob/main/assets/Screenshot%202022-12-11%20181043.png)
 
 ## Usage
 
