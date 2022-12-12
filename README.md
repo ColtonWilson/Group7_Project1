@@ -21,6 +21,8 @@ A currency exchange conversion calculator that uses current exchange rates to de
 
 To use the currency converter click on the dropdown menu and select the currency you would like to convert the value of. Once you choose your desired currency click submit and your results will display.
 
+You can view your history of the currencies you have converted by clicking "history". Clear your history by clicking "clear history". As well as go back to the start of input by clicking "go back".
+
 To view the stock ticker you will need to activate the proxyURL below.
 #Need This
 website to turn on the proxyURL <a href="https://cors-anywhere.herokuapp.com/corsdemo">ProxyURL</a>
